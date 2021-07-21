@@ -99,3 +99,5 @@ jobs:
       - name: 'Copy static website with the AWS CLI'
         run: |
           cd app ; aws s3 sync . s3://infra.devopsgeekshubsacademy.click --delete
+          ID=$(aws cloudfront list-distributions --query 'DistributionList.Items[*].{id:Id,origin:Origins.Items[0].id}[?origin==infra.devopsgeekshubsacademy.click.s3.amazonaws.com].id' --output text)
+          aws cloudfront create-invalidation --distribution-id $ID --paths "/*"
