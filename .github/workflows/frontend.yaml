@@ -98,4 +98,4 @@ jobs:
 
       - name: 'Copy static website with the AWS CLI'
         run: |
-          cd app ; aws s3 sync . s3://infra.devopsgeekshubsacademy.click
+          cd app ; aws s3 sync . s3://infra.devopsgeekshubsacademy.click --delete
