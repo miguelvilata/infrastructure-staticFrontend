@@ -34,7 +34,7 @@ data "terraform_remote_state" "acm" {
   backend = "s3"
   config = {
     bucket = "terraform-devops-dev"
-    key    = "dev/acm_cloudfront_terraform.tfstate"
+    key    = "dev/acm_terraform.tfstate"
     region = "eu-west-1"
   }
 }
