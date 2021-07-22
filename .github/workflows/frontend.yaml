@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: 'Deploy Static Solutions S3 + CloudFront'
+name: 'Deploy and Destroy Static Solutions S3 + CloudFront'
 
 # Controls when the action will run. 
 on:
