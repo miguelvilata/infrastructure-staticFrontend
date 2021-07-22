@@ -122,7 +122,7 @@ jobs:
       - name: 'Flush cache cloudfront'
         if: github.ref == 'refs/heads/stg'
         run: |
-          ID=$(aws cloudfront list-distributions --query 'DistributionList.Items[*].{id:Id,origin:Origins.Items[0].id}[?origin==${{ env.AWS_S·_BUCKET }}.s3.amazonaws.com].id' --output text)
+          ID=$(aws cloudfront list-distributions --query 'DistributionList.Items[*].{id:Id,origin:Origins.Items[0].id}[?origin==${{ env.AWS_S3_BUCKET }}.s3.amazonaws.com].id' --output text)
           aws cloudfront create-invalidation --distribution-id $ID --paths "/*"
 
       # Destroy Infra
