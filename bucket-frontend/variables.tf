@@ -7,7 +7,6 @@ variable "region" {
 variable "bucketname" {
   default =   "infra.devopsgeekshubsacademy.click"
 }
-
 ##############
 ## ADD TAGS ##
 ##############
